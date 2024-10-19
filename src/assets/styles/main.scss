@@ -1,5 +1,4 @@
 @import '@/assets/styles/_variables.scss';
-@import '@/assets/styles/_reset.scss';
 @import 'element-plus/theme-chalk/dark/css-vars';
 
 body {
@@ -22,15 +21,6 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-p,
-h1,
-h2,
-h3,
-li,
-a {
-  color: var(--text-color);
 }
 
 h1 {
