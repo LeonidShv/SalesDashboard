@@ -1,10 +1,8 @@
 <template>
   <el-select
-    class="Select"
     @update:model-value="value => $emit('update:v-model', value)"
-    multiple
-    collapse-tags
     :placeholder="placeholder"
+    class="w-full md:!w-40"
   >
     <el-option
       v-for="{ value, label, disabled } in options"
@@ -33,9 +31,3 @@ defineProps({
   },
 })
 </script>
-
-<style lang="scss" scoped>
-.Select {
-  min-width: 160px;
-}
-</style>

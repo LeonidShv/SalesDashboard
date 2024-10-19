@@ -1,11 +1,5 @@
 <template>
-  <ElSkeleton
-    class="skeleton__default"
-    :rows="40"
-    :loading="loading"
-    animated
-    :style="styleConfig"
-  >
+  <ElSkeleton class="skeleton__default" :rows="40" :loading="loading" animated>
   </ElSkeleton>
 </template>
 
@@ -19,10 +13,6 @@ defineProps({
   loading: {
     type: Boolean,
     default: false,
-  },
-  styleConfig: {
-    type: Object,
-    default: () => {},
   },
 })
 </script>
