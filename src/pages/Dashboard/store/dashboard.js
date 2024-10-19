@@ -10,8 +10,12 @@ export const useSalesStore = defineStore('sales', () => {
   const salesList = ref([])
 
   async function getSalesList(page, limit) {
-    const response = await readSalesData(page, limit)
-    salesList.value = response.data.list
+    try {
+      const response = await readSalesData(page, limit)
+      salesList.value = response.data.list
+    } catch (e) {
+      console.warn(e);
+    }
   }
 
   const salesDataForChart = ref({
@@ -20,16 +24,23 @@ export const useSalesStore = defineStore('sales', () => {
   })
 
   async function getSalesDataForChart() {
-    const response = await readSalesDataForChart()
-    salesDataForChart.value = response.data
+    try {
+      const response = await readSalesDataForChart()
+      salesDataForChart.value = response.data
+    } catch (e) {
+      console.warn(e);
+    }
   }
 
   const salesDataForCards = ref([])
 
   async function getSalesDataForCards() {
-    const response = await readSalesDataForCards()
-    console.log('response.data', response.data)
-    salesDataForCards.value = response.data
+    try {
+      const response = await readSalesDataForCards()
+      salesDataForCards.value = response.data
+    } catch (e) {
+      console.warn(e);
+    }
   }
 
   return {
