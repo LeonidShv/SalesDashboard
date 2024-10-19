@@ -1,0 +1,24 @@
+html {
+  --dark: #161b22;
+  --deep-dark: #0d1116;
+  --light: #f0f6fc;
+
+  --white: #fff;
+  --grey-light: #f9f9f9;
+}
+
+html.dark {
+  --span-text: #b1b6bb;
+  --border: var(--light);
+  --bg-app: var(--deep-dark);
+  --bg-block: var(--dark);
+  --text-color: var(--light);
+}
+
+html.light {
+  --span-text: #4d5259;
+  --border: var(--dark);
+  --bg-app: var(--white);
+  --bg-block: var(--grey-light);
+  --text-color: var(--dark);
+}
