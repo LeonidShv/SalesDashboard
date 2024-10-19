@@ -1,5 +1,5 @@
 <template>
-  <el-table :data="tableData" :style="styleConfig" @row-click="handleRowClick">
+  <el-table :data="tableData" @row-click="handleRowClick">
     <el-table-column
       v-for="{ name, label, fixed, width } in configuration"
       :key="name"
@@ -31,10 +31,6 @@ defineProps({
   configuration: {
     type: Array,
     default: () => [],
-  },
-  styleConfig: {
-    type: Object,
-    default: () => {},
   },
 })
 </script>

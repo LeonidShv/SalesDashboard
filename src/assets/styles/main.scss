@@ -63,10 +63,12 @@ body {
 }
 
 .router-view {
-  height: calc(100vh - var(--header-height));
+  position: relative;
+  height: calc(100vh);
   overflow: auto;
   padding: 12px 36px;
-  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 
   @media (min-width: 768px) {
     padding: 32px 56px;
